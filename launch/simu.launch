@@ -1,0 +1,8 @@
+<launch>
+
+    <param name="file_path" value="/home/morgan/Documents/Code_these/Phd_fleet_stability/ROVs/ROV_simulation/data/simu_equilateral_triangle.json" />
+    <arg name="rvizconfig" default="$(find rov_rviz)/rviz/2rovs.rviz" />
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+    <node name="rov_rviz" pkg="rov_rviz" type="simu_reader_node" required="true" output="screen" />
+</launch>
